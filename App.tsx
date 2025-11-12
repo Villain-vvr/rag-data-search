@@ -216,7 +216,7 @@ const App: React.FC = () => {
   
   const processZipFile = async (zipFile: File) => {
     const buffer = await zipFile.arrayBuffer();
-    const zip = await JSZip.default.loadAsync(buffer);
+    const zip = await JSZip.loadAsync(buffer);
     
     const supportedExtensions = ['json', 'csv', 'xlsx', 'pdf'];
     let foundFile: any = null;
