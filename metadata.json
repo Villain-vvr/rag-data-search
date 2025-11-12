@@ -1,0 +1,5 @@
+
+{
+  "name": "RAG Profile Search",
+  "description": "An application that implements Retrieval-Augmented Generation (RAG) to search through a dataset of user profiles using natural language queries powered by the Gemini API."
+}

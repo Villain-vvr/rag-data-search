@@ -1,0 +1,8 @@
+{
+  "name": "rag-data-search",
+  "version": "1.0.0",
+  "description": "An application that implements Retrieval-Augmented Generation (RAG) to search any JSON or CSV dataset using natural language queries powered by the Gemini API.",
+  "private": true,
+  "author": "",
+  "license": "ISC"
+}
