@@ -3,8 +3,7 @@ if (!process.env.API_KEY) {
   throw new Error("API_KEY environment variable is not set");
 }
 
-const ai = new GoogleGenerativeAIprocess.env.API_KEY || '' });
-
+const ai = new GoogleGenerativeAI(process.env.API_KEY || '');
 export const generateSummary = async (query: string, contextItems: any[]): Promise<string> => {
   const model = 'gemini-2.5-flash';
   
@@ -31,8 +30,7 @@ export const generateSummary = async (query: string, contextItems: any[]): Promi
   `;
 
   try {
-    const response = await ai..getGenerativeModel({ model })s.generateContent({
-      contents: prompt,
+    const response = await ai.getGenerativeModel({ model }).generateContent({      contents: prompt,
     });
     return response.text;
   } catch (error) {
