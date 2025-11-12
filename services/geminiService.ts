@@ -1,10 +1,9 @@
-import { GoogleGenAI } from "@google/genai";
-
+import { GoogleGenerativeAI } from "@google/generative-ai";
 if (!process.env.API_KEY) {
   throw new Error("API_KEY environment variable is not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenerativeAI({ apiKey: process.env.API_KEY });
 
 export const generateSummary = async (query: string, contextItems: any[]): Promise<string> => {
   const model = 'gemini-2.5-flash';
